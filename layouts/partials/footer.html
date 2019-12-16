@@ -1,7 +1,7 @@
 <footer>
     <section>
         <p>
-            © {{ now.Format "2006" }} <a href='{{ relref . "/" }}'>{{ .Site.Title }}</a>
+            © {{ now.Format "2006" }} {{ .Site.Title }}
         </p>
     </section>
     {{ if .Site.Menus.footer }}
