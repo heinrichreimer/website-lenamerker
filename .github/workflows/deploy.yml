@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:	
+    branches:	
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check-out
+        uses: actions/checkout@v1
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.59.1'
+      - name: Build
+        run: hugo
+      - name: Deploy to Uperspace
+        uses: appleboy/scp-action@v0.0.5
+        with:
+          username: merker
+          host: brorsen.uberspace.de
+          key: ${{ secrets.DEPLOY_KEY }}
+          source: public
+          strip_components: 1
+          rm: true
+          target: ${{ secrets.DEPLOY_TARGET_PATH }}
