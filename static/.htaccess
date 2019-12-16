@@ -1,3 +1,3 @@
-<If "%{HTTPS} != 'on' || %{HTTP_HOST} != 'heinrichreimer.com'">
-    Redirect / http://heinrichreimer.com/
+<If "%{HTTPS} != 'on' || %{HTTP_HOST} != 'lenamerker.de'">
+    Redirect / http://lenamerker.de/
 </If>
