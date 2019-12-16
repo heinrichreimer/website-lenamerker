@@ -1,7 +1,7 @@
 body {
     color: #2D1710;
     background: #FFFACC;
-    font-family: sans-serif;
+    font-family: "Georgia", "Times New Roman", "Times", sans-serif;
 
     nav {
         text-align: center;
@@ -9,7 +9,6 @@ body {
 
     &.home {
         main {
-            font-family: monospace;
             padding-top: 20vh;
             text-align: center;
 
