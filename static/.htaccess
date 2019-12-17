@@ -1,3 +1,5 @@
 <If "%{HTTPS} != 'on' || %{HTTP_HOST} != 'lenamerker.de'">
-    Redirect / http://lenamerker.de/
+    Redirect / https://lenamerker.de/
 </If>
+
+ErrorDocument 404 https://lenamerker.de/404.html
