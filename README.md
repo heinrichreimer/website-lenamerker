@@ -1,3 +1,3 @@
-[![GitHub Actions](https://img.shields.io/github/workflow/status/heinrichreimer/lenamerker/CI?style=flat-square)](https://github.com/heinrichreimer/lenamerker/actions)
+[![GitHub Actions](https://github.com/heinrichreimer/website-lenamerker/workflows/CI/badge.svg)](https://github.com/heinrichreimer/website-lenamerker/actions)
 
-# Lena Merker portfolio
+# Lena Merker's portfolio
