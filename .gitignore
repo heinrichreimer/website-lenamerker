@@ -98,3 +98,4 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/hugo,jetbrains+all
+.hugo_build.lock
