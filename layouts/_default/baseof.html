@@ -46,9 +46,10 @@
 {{ partial "navigation.html" . }}
 {{ end }}
 
-<main role="main">
+<main>
     {{ block "main" . }}{{ end }}
 </main>
+
 {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
 {{ block "scripts" . }}{{ partial "scripts.html" . }}{{ end }}
 

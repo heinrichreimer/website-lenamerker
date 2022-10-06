@@ -1,18 +1,14 @@
 <footer>
-    <section>
-        <p>
-            © {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
-        </p>
-    </section>
+    <p>
+        © {{ now.Format "2006" }} {{ .Site.Title }}
+    </p>
     {{ if .Site.Menus.footer }}
-    <section>
-        <ul>
-            {{ range .Site.Menus.footer }}
-            <li>
-                <a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    </section>
+    <ul>
+        {{ range .Site.Menus.footer }}
+        <li>
+            <a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
     {{ end }}
 </footer>

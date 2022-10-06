@@ -1,0 +1,16 @@
+{{- $name := .Get "name" -}}
+{{- $link := .Get "link" -}}
+{{- $fill := .Get "fill" -}}
+{{- if and $name $fill -}}
+{{- $resource := $.Page.Resources.GetMatch $name -}}
+{{- $linkResource := $.Page.Resources.GetMatch $link -}}
+{{- if eq $resource.ResourceType "image" -}}
+{{- with $resource.Fill $fill -}}
+<a href="{{ $linkResource.RelPermalink }}" target="_blank">
+    <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+</a>
+{{- end -}}
+{{- end -}}
+{{- else -}}
+{{- errorf "No resource name specified" -}}
+{{- end -}}
