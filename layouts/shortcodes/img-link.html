@@ -5,10 +5,12 @@
 {{- $resource := $.Page.Resources.GetMatch $name -}}
 {{- $linkResource := $.Page.Resources.GetMatch $link -}}
 {{- if eq $resource.ResourceType "image" -}}
-{{- with $resource.Fill $fill -}}
+{{- with $resource -}}
+{{- with .Fill (print "webp q50 " $fill) -}}
 <a href="{{ $linkResource.RelPermalink }}" target="_blank">
     <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
 </a>
+{{- end -}}
 {{- end -}}
 {{- end -}}
 {{- else -}}

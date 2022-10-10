@@ -3,8 +3,10 @@
 {{- if and $name $fill -}}
 {{- $resource := $.Page.Resources.GetMatch $name -}}
 {{- if eq $resource.ResourceType "image" -}}
-{{- with $resource.Fill $fill -}}
+{{- with $resource -}}
+{{- with .Fill (print "webp q50 " $fill) -}}
 <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+{{- end -}}
 {{- end -}}
 {{- end -}}
 {{- else -}}
