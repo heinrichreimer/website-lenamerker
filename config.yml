@@ -6,8 +6,7 @@ metaDataFormat: "yaml"
 defaultContentLanguage: "de"
 enableRobotsTXT: true
 disableKinds:
-  - taxonomies
-  - taxonomyTerm
+  - taxonomy
 
 sitemap:
   changeFreq: "monthly"
