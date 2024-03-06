@@ -25,15 +25,6 @@ jobs:
           echo "9e4f455f7b8619959d7878af2862383be58392eb963a14ff87cc512c03701e2a  sass_embedded-1.56.2-linux-x64.tar.gz" | sha256sum -c;
           tar -xvf sass_embedded-1.56.2-linux-x64.tar.gz;
           echo "$GITHUB_WORKSPACE/sass_embedded/" >> $GITHUB_PATH
-      - name: 🧰 Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.10'
-          cache: yarn
-          cache-dependency-path: assets/yarn.lock
-      - name: 🧰 Install asset dependencies
-        working-directory: assets/
-        run: yarn
       - name: ♻️ Cache Hugo modules
         uses: actions/cache@v4
         with:
